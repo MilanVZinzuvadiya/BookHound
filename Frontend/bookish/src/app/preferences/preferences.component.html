@@ -1,0 +1,38 @@
+<br><br><br><br>
+<div class="main">
+<mat-card>
+<h2>Authors I like..</h2>
+<mat-form-field style="width: 100%;">
+    <mat-chip-list #chipList area-label="author addition">
+        <mat-chip *ngFor="let auth of authors" [selectable]="selectable"
+        [removable]="removable" (removed)="remove(auth)">
+            {{auth}}
+            <mat-icon matChipRemove *ngIf="removable">cancel</mat-icon>
+        </mat-chip>
+        <input class="listInput" placeholder="I like ..."
+           [matChipInputFor]="chipList"
+           [matChipInputSeparatorKeyCodes]="separatorKeysCodes"
+           [matChipInputAddOnBlur]="addOnBlur"
+           (matChipInputTokenEnd)="add($event)">
+    </mat-chip-list>
+</mat-form-field>
+</mat-card>
+<br><br><br><br><br>
+<mat-card>
+<h2>I like reading .. (genres)</h2>
+<mat-form-field style="width: 100%;">
+    <mat-chip-list #chipList2 area-label="genre addition">
+        <mat-chip *ngFor="let gen of genres" [selectable]="selectable2"
+        [removable]="removable2" (removed)="removeGen(gen)">
+            {{gen}}
+            <mat-icon matChipRemove *ngIf="removable2">cancel</mat-icon>
+        </mat-chip>
+        <input placeholder="I like reading ..."
+           [matChipInputFor]="chipList2"
+           [matChipInputSeparatorKeyCodes]="separatorKeysCodes"
+           [matChipInputAddOnBlur]="addOnBlur2"
+           (matChipInputTokenEnd)="addGen($event)">
+    </mat-chip-list>
+  </mat-form-field>
+</mat-card>
+</div>  

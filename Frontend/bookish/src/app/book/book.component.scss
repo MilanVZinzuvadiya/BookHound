@@ -1,0 +1,99 @@
+#booklistTitle{
+    text-align: left;
+    font-family: 'comfortaa';
+    letter-spacing: 3px;
+    z-index: 1;
+    //background-color: yellowgreen;
+    border-style: none none solid none;
+    width: auto;
+    display: block;
+    padding: 25px 20px 30px 20px;
+    top:40px;
+    width: 100%;
+    background-color: whitesmoke;
+    margin-top: 17px;
+    margin-left: -10px;
+}
+#space
+{
+    height: 125px;
+    visibility: hidden;
+}
+div{
+    display: block;
+    align-self: center;
+    //background-color: #E5D4ED;
+    background-color: whitesmoke;
+    width: 94%;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid gray;
+    box-shadow: 0 10px 30px rgba( #000000, 0.25);
+    margin-top: 5px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 15px;
+    transition: border 0.4s, width 0.5s;
+    font-family: 'Comfortaa';
+    
+    h1{
+        text-align: left;
+        text-shadow: 3px 2px 2px #aaa;
+    }
+    h2{
+        position: relative;
+        text-align: right;
+    }
+    .addlist
+    {
+        display:block; 
+        border:2px solid rgb(110, 110, 110); 
+        border-radius:5px;
+        float: right;
+        font-size: medium;
+        font-weight: bold;
+        font-family: 'Comfortaa';
+    }
+    
+    .discription
+    {
+        
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 8px;
+        box-shadow: 0 3px 10px rgba( #6D72C3, 0.25);
+        width: 96%;
+        border: 1px dashed rgba( #4FB477, 0.50);
+        padding: 10px;
+        text-align: justify;
+        height: 32px;
+        overflow: hidden;
+        font-family: 'Exo';
+
+    }
+    &:hover{
+        border: 2px solid rgb(110, 110, 110);
+        width: 96%;
+        > p{
+            overflow: visible;
+            height: fit-content;
+            border: 1.5px solid rgba( #419462, 0.50);
+        }
+    }
+
+}
+
+
+.show{
+    overflow: visible;
+    height: fit-content;
+}
+
+@media screen and (min-width:840px){
+    #booklistTitle{
+        position: fixed;
+        z-index: 1;
+    }
+
+}

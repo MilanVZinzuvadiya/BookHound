@@ -1,0 +1,22 @@
+.grid-container {
+    display: grid;
+    column-count: 2;
+    margin-left: -10px;
+  }
+
+  .grid-container > div {
+    grid-column: 1/2;
+    text-align: center;
+    border-style: groove;
+  }
+
+  @media screen and (min-width:840px){
+    #searchResults
+  {
+      border-style: hidden dotted hidden hidden;
+  }
+    #likey {
+        grid-column: 2 /2;
+        border-style: hidden hidden hidden dotted;
+      }   
+  }
